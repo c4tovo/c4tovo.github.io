@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://sec-cat.github.io/img/adversarial/fgsm.png">
 <meta property="article:published_time" content="2023-03-11T01:10:20.000Z">
-<meta property="article:modified_time" content="2023-04-26T12:50:53.081Z">
+<meta property="article:modified_time" content="2023-04-26T13:38:41.647Z">
 <meta property="article:author" content="cat">
 <meta property="article:tag" content="对抗样本">
 <meta property="article:tag" content="深度学习">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.4k 字
+          9.2k 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          54 分钟
+          77 分钟
         
       </span>
     
@@ -279,30 +279,32 @@
             
               <div class="markdown-body">
                 
-                <p>对对抗攻击的调研记录</p>
+                <div class="note note-success">
+            <p>对对抗攻击的调研记录</p>
+          </div>
 <span id="more"></span>
 <h2 id="分类">分类</h2>
 <h3 id="基于图像的">基于图像的</h3>
 <p><img src="/img/adversarial/mind.png" srcset="/img/loading.gif" lazyload alt="mind"></p>
 <p>相关论文(安全顶会2016-2022)</p>
-<p>Mahmood Sharif et al. [1] 2016/CCS</p>
-<p>Nicolas Papernot et al. [2] 2017/CCS</p>
-<p>Ali Shafahi et al. [3] 2018/NIPS</p>
-<p>Yossi Adi et al. [4] 2018/USENIX</p>
-<p>Yisroel Mirsky et al. [5] 2019/USENIX</p>
-<p>Shang-Tse Chen et al. [6] 2019/ECML</p>
-<p>PKDD Qixue Xiao et al. [7] 2019/USENIX</p>
-<p>Yajie Wang et al. [8] 2020/JNCA</p>
-<p>Jesús Solano et al. [9] 2020/CCS</p>
-<p>Chang Liao et al. [10] 2020/CCS</p>
-<p>Ilia Shumailov et al. [11] 2020/CCS</p>
-<p>An Ju et al. [12] 2020/CCS</p>
-<p>Sahar Abdelnabi and Mario Fritz.[13]2021/CCS</p>
-<p>Luke E. Richards et al .[14]2021/CCS</p>
-<p>Rauf Izmailov et al. [15]2021/CCS</p>
-<p>Kim A B Midtlid et al.[16]2022/CCS</p>
-<p>Jiawei Liu et al.[17]2022/CCS</p>
-<p>Jan-Philipp Schulze et al.[18]2022/CCS</p>
+<p>Mahmood Sharif et al. <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“M. Sharif, S. Bhagavatula, L. Bauer, and M. K. Reiter, “Accessorize to a crime: real and stealthy attacks on state-of-the-art face recognition,” in Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security, pp. 1528–1540, Vienna, Austria, 2016.”&gt;[1]</span></a></sup> 2016/CCS</p>
+<p>Nicolas Papernot et al. <sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“N. Papernot, P. McDaniel, I. Goodfellow, S. Jha, Z. B. Celik, and A. Swami, “Practical black-box attacks against machine learning,” in Proceedings of the 2017 ACM on Asia Conference on Computer and Communications Security, pp. 506–519, Abu Dhabi, United Arab Emirates, 2017.”&gt;[2]</span></a></sup> 2017/CCS</p>
+<p>Ali Shafahi et al. <sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=&quot;A. Shafahi, W. R. Huang, M. Najibi et al., &quot;Poison frogs! Targeted clean-label poisoning attacks on neural networks,“2018, https://arxiv.org/abs/1804.00792.”&gt;[3]</span></a></sup> 2018/NIPS</p>
+<p>Yossi Adi et al. <sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“Y. Adi, C. Baum, M. Cisse, B. Pinkas, and J. Keshet, “Turning your weakness into a strength: watermarking deep neural networks by backdooring,” in 27th {USENIX} Security Symposium ({USENIX} Security 18), USENIX Association, USA, 2018.”&gt;[4]</span></a></sup> 2018/USENIX</p>
+<p>Yisroel Mirsky et al. <sup id="fnref:5" class="footnote-ref"><a href="#fn:5" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“Y. Mirsky, T. Mahler, I. Shelef, and Y. Elovici, “CT-GAN: malicious tampering of 3D medical imagery using deep learning,” in 28th {USENIX} Security Symposium ({USENIX} Security 19, pp. 461–478, USA, 2019.”&gt;[5]</span></a></sup> 2019/USENIX</p>
+<p>Shang-Tse Chen et al. <sup id="fnref:6" class="footnote-ref"><a href="#fn:6" rel="footnote"><span class="hint--top hint--rounded" aria-label="S. T. Chen, C. Cornelius, J. Martin, and D. H. P. Chau, Shape Shifter: Robust Physical Adversarial Attack on Faster R-CNN Object Detector: Recognizing Outstanding, [Ph.D. thesis], Springer, 2019.">[6]</span></a></sup> 2019/ECML</p>
+<p>PKDD Qixue Xiao et al. <sup id="fnref:7" class="footnote-ref"><a href="#fn:7" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=&quot;Q. Xiao, Y. Chen, C. Shen, Y. Chen, and K. Li, &quot;Seeing is not believing: camouflage attacks on image scaling algorithms,“28th {USENIX} Security Symposium ({USENIX} Security 19), pp. 443–460, USENIX Association, Santa Clara, CA, 2019.”&gt;[7]</span></a></sup> 2019/USENIX</p>
+<p>Yajie Wang et al. <sup id="fnref:8" class="footnote-ref"><a href="#fn:8" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“Y. Wang, Y. Tan, W. Zhang, Y. Zhao, and X. Kuang, “An adversarial attack on DNN-based black-box object detectors,” Journal of Network and Computer Applications, vol. 161, p. 102634, 2020.”&gt;[8]</span></a></sup> 2020/JNCA</p>
+<p>Jesús Solano et al. <sup id="fnref:9" class="footnote-ref"><a href="#fn:9" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“J. Solano, C. Lopez, E. Rivera, A. Castelblanco, L. Tengana, and M. Ochoa, “SCRAP: synthetically composed replay attacks vs. adversarial machine learning attacks against mouse-based biometric authentication,” in CCS '20: 2020 ACM SIGSAC Conference on Computer and Communications Security, pp. 37–47, 2020.”&gt;[9]</span></a></sup> 2020/CCS</p>
+<p>Chang Liao et al. <sup id="fnref:10" class="footnote-ref"><a href="#fn:10" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“C. Liao, Y. Cheng, C. Fang, and J. Shi, “Where does the robustness come from?: a study of the transformation-based ensemble defence,” in Proceedings of the 13th ACM Workshop on Artificial Intelligence and Security, pp. 1–12, USA, 2020.”&gt;[10]</span></a></sup> 2020/CCS</p>
+<p>Ilia Shumailov et al. <sup id="fnref:11" class="footnote-ref"><a href="#fn:11" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“I. Shumailov, Y. Zhao, R. Mullins, and R. Anderson,“Towards certifiable adversarial sample detection,” in Proceedings of the 13th ACM Workshop on Artificial Intelligence and Security, pp. 13–24, USA, 2020.”&gt;[11]</span></a></sup> 2020/CCS</p>
+<p>An Ju et al. <sup id="fnref:12" class="footnote-ref"><a href="#fn:12" rel="footnote">&lt;span class=“hint–top hint–rounded” aria-label=“J. An and D. Wagner, “E-ABS: extending the analysis-bysynthesis robust classification model to more complex image domains,” in CCS '20: 2020 ACM SIGSAC Conference on Computer and Communications Security, pp. 25–36, 2020.”&gt;[12]</span></a></sup> 2020/CCS</p>
+<p>Sahar Abdelnabi and Mario Fritz.<sup id="fnref:13" class="footnote-ref"><a href="#fn:13" rel="footnote"><span class="hint--top hint--rounded" aria-label="S. Abdelnabi, M. Fritz, What’s in the Box: Deflecting Adversarial Attacks by Randomly Deploying Adversarially-Disjoint Models, in: Proceedings of the 8th ACM Workshop on Moving Target Defense, Association for Computing Machinery, Virtual Event, Republic of Korea, 2021: pp. 3–12.">[13]</span></a></sup>2021/CCS</p>
+<p>Luke E. Richards et al .<sup id="fnref:14" class="footnote-ref"><a href="#fn:14" rel="footnote"><span class="hint--top hint--rounded" aria-label="L.E. Richards, A. Nguyen, R. Capps, S. Forsyth, C. Matuszek, E. Raff, Adversarial Transfer Attacks With Unknown Data and Class Overlap, in: Proceedings of the 14th ACM Workshop on Artificial Intelligence and Security, Association for Computing Machinery, Virtual Event, Republic of Korea, 2021: pp. 13–24.">[14]</span></a></sup>2021/CCS</p>
+<p>Rauf Izmailov et al. <sup id="fnref:15" class="footnote-ref"><a href="#fn:15" rel="footnote"><span class="hint--top hint--rounded" aria-label="R. Izmailov, P. Lin, S. Venkatesan, S. Sugrim, Combinatorial Boosting of Classifiers for Moving Target Defense Against Adversarial Evasion Attacks, in: Proceedings of the 8th ACM Workshop on Moving Target Defense, Association for Computing Machinery, Virtual Event, Republic of Korea, 2021: pp. 13–21.">[15]</span></a></sup>2021/CCS</p>
+<p>Kim A B Midtlid et al.<sup id="fnref:16" class="footnote-ref"><a href="#fn:16" rel="footnote"><span class="hint--top hint--rounded" aria-label="K.A.B. Midtlid, J. Åsheim, J. Li, Magnitude Adversarial Spectrum Search-Based Black-Box Attack against Image Classification, in: Proceedings of the 15th ACM Workshop on Artificial Intelligence and Security, Association for Computing Machinery, Los Angeles, CA, USA, 2022: pp. 67–77.">[16]</span></a></sup>2022/CCS</p>
+<p>Jiawei Liu et al.<sup id="fnref:17" class="footnote-ref"><a href="#fn:17" rel="footnote"><span class="hint--top hint--rounded" aria-label="J. Liu, Y. Kang, D. Tang, K. Song, C. Sun, X. Wang, W. Lu, X. Liu, Order-Disorder: Imitation Adversarial Attacks for Black-box Neural Ranking Models, in: 2022.">[17]</span></a></sup>2022/CCS</p>
+<p>Jan-Philipp Schulze et al.<sup id="fnref:18" class="footnote-ref"><a href="#fn:18" rel="footnote"><span class="hint--top hint--rounded" aria-label="P.A. Sava, J.-P. Schulze, P. Sperl, K. Böttinger, Assessing the Impact of Transformations on Physical Adversarial Attacks, in: Proceedings of the 15th ACM Workshop on Artificial Intelligence and Security, Association for Computing Machinery, Los Angeles, CA, USA, 2022: pp. 79–90.">[18]</span></a></sup>2022/CCS</p>
 <h3 id="基于文本的">基于文本的</h3>
 <p><img src="/img/adversarial/mind2.png" srcset="/img/loading.gif" lazyload alt="mind2"></p>
 <h3 id="基于恶意软件的">基于恶意软件的</h3>
@@ -576,6 +578,12 @@
                   <article class="post-next col-6">
                     
                     
+                      <a href="/2022/05/20/ctfshowblog/" title="ctf大佬博客">
+                        <span class="hidden-mobile">ctf大佬博客</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
                   </article>
                 </div>
               
@@ -679,7 +687,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-bug"></i> <a href="https://github.com/sec-cat" target="_blank" rel="nofollow noopener"><span>My Github</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-codepen-fill"></i> <a href="https://hexo.fluid-dev.com" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <i class="iconfont icon-bug"></i> <a href="https://github.com/sec-cat" target="_blank" rel="nofollow noopener"><span>My Github</span></a> 
     </div>
   
   

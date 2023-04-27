@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Git push/pull时的网络问题</title>
+    <link href="/2023/04/27/githubconn/"/>
+    <url>/2023/04/27/githubconn/</url>
+    
+    <content type="html"><![CDATA[<div class="note note-success">            <p>Git提示Connection was reset, errno 10054解决方法</p>          </div><span id="more"></span><h2 id="问题描述">问题描述</h2><p>准备提交代码到远程仓库的,但是突然报错10054，提示：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">fatal: unable to access <span class="hljs-string">&#x27;https://github.com/xxxxx&#x27;</span>: OpenSSL SSL_read: Connection was reset, errno 10054<br></code></pre></td></tr></table></figure><p>或者</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">fatal: connect to github.com port 443 after 21036 ms: Timed out<br></code></pre></td></tr></table></figure><h2 id="解决方案">解决方案</h2><p>首先尝试,不过一般没用</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">git config --global http.sslVerify <span class="hljs-string">&quot;false&quot;</span><br><br></code></pre></td></tr></table></figure><p>当科学上网时，修改全局代理接口，其中的端口应该为本机中的代理接口端口</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">git config --global http.proxy http://127.0.0.1:9999<br>git config --global https.proxy http://127.0.0.1:9999<br></code></pre></td></tr></table></figure><p>排除以上问题后优化网络环境,尝试提交,然后成功了</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>问题</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>github</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>攻防武器库</title>
     <link href="/2023/04/26/alltools/"/>
     <url>/2023/04/26/alltools/</url>

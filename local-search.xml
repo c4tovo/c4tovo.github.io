@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>在vue中使用highlight.js实现代码显示</title>
+    <link href="/2023/05/01/highlightjs/"/>
+    <url>/2023/05/01/highlightjs/</url>
+    
+    <content type="html"><![CDATA[<div class="note note-success">            <p>vue使用highLight.js实现代码高亮，但是仅仅限于对代码进行高亮操作，图片以及二进制（jar、os、smali等）暂不支持</p>          </div><span id="more"></span><h2 id="template-demo">template demo</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-html</span>=<span class="hljs-string">&quot;code_data&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span><br><br></code></pre></td></tr></table></figure><h2 id="安装highlight-js">安装highlight.js</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install --save vue-highlightjs<br>npm install --save highlight.js<br></code></pre></td></tr></table></figure><h2 id="typescript">typescript</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> hljs <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/core&#x27;</span><br><span class="hljs-keyword">import</span> java <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/java&#x27;</span><br><span class="hljs-keyword">import</span> plaintext <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/plaintext&#x27;</span><br><span class="hljs-keyword">import</span> xml <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/xml&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;highlight.js/styles/github.css&#x27;</span><br><br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;java&#x27;</span>, java)<br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;plaintext&#x27;</span>, plaintext)<br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;xml&#x27;</span>, xml)<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>    <span class="hljs-title function_">setup</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">const</span> code_data = <span class="hljs-title function_">ref</span>();<br>    <span class="hljs-comment">// 要显示的代码内容</span><br>    <span class="hljs-keyword">const</span> content = <br>        <span class="hljs-string">`Tip:\n1、1\n2、2`</span>;<br>    code_data.<span class="hljs-property">value</span> = <span class="hljs-title function_">lineNumbers</span>(content, <span class="hljs-string">&#x27;plaintext&#x27;</span>)<br>    &#125;,<br>    <span class="hljs-title function_">mounted</span>(<span class="hljs-params"></span>) &#123;<br>    hljs.<span class="hljs-title function_">highlightAll</span>();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方案</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue</tag>
+      
+      <tag>highlight</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Git push/pull时的网络问题</title>
     <link href="/2023/04/27/githubconn/"/>
     <url>/2023/04/27/githubconn/</url>
@@ -13,7 +40,7 @@
     
     <categories>
       
-      <category>问题</category>
+      <category>解决方案</category>
       
     </categories>
     
@@ -88,7 +115,7 @@
     
     <categories>
       
-      <category>问题</category>
+      <category>解决方案</category>
       
     </categories>
     

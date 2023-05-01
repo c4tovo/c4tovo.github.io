@@ -16,25 +16,25 @@
   <meta name="author" content="cat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一些关于ctf、渗透的大佬博客">
+    <meta name="description" content="vue使用highLight.js实现代码高亮，但是仅仅限于对代码进行高亮操作，图片以及二进制（jar、os、smali等）暂不支持">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ctf大佬博客">
-<meta property="og:url" content="http://sec-cat.github.io/2022/05/20/ctfshowblog/index.html">
+<meta property="og:title" content="在vue中使用highlight.js实现代码显示">
+<meta property="og:url" content="http://sec-cat.github.io/2023/05/01/highlightjs/index.html">
 <meta property="og:site_name" content="Sec-cat&#39;s Blog">
-<meta property="og:description" content="一些关于ctf、渗透的大佬博客">
+<meta property="og:description" content="vue使用highLight.js实现代码高亮，但是仅仅限于对代码进行高亮操作，图片以及二进制（jar、os、smali等）暂不支持">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
-<meta property="article:published_time" content="2022-05-20T04:02:23.000Z">
-<meta property="article:modified_time" content="2023-04-28T06:21:59.329Z">
+<meta property="og:image" content="http://sec-cat.github.io/img/highlightjs/code.png">
+<meta property="article:published_time" content="2023-05-01T06:27:50.000Z">
+<meta property="article:modified_time" content="2023-05-01T06:38:30.035Z">
 <meta property="article:author" content="cat">
-<meta property="article:tag" content="ctf">
-<meta property="article:tag" content="ctfshow">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="highlight">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
+<meta name="twitter:image" content="http://sec-cat.github.io/img/highlightjs/code.png">
   
   
   
-  <title>ctf大佬博客 - Sec-cat&#39;s Blog</title>
+  <title>在vue中使用highlight.js实现代码显示 - Sec-cat&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,13 +194,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/ctfshowblog/ctf.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/highlightjs/code.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ctf大佬博客"></span>
+            <span id="subtitle" data-typed-text="在vue中使用highlight.js实现代码显示"></span>
           
         </div>
 
@@ -211,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-20 12:02" pubdate>
-          2022年5月20日 中午
+        <time datetime="2023-05-01 14:27" pubdate>
+          2023年5月1日 下午
         </time>
       </span>
     
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          907 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          20 分钟
+          8 分钟
         
       </span>
     
@@ -279,17 +279,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="友情链接"
-        id="heading-844eea1b2387fb968291c78788e4d8ca" role="tab" data-toggle="collapse" href="#collapse-844eea1b2387fb968291c78788e4d8ca"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="解决方案"
+        id="heading-de842a6c80128bf1587c7cd451914e7a" role="tab" data-toggle="collapse" href="#collapse-de842a6c80128bf1587c7cd451914e7a"
         aria-expanded="true"
       >
-        友情链接
-        <span class="list-group-count">(1)</span>
+        解决方案
+        <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-844eea1b2387fb968291c78788e4d8ca"
-           role="tabpanel" aria-labelledby="heading-844eea1b2387fb968291c78788e4d8ca">
+      <div class="category-collapse collapse show" id="collapse-de842a6c80128bf1587c7cd451914e7a"
+           role="tabpanel" aria-labelledby="heading-de842a6c80128bf1587c7cd451914e7a">
         
         
           
@@ -298,10 +298,28 @@
     
       
       
-        <a href="/2022/05/20/ctfshowblog/" title="ctf大佬博客"
+        <a href="/2023/04/27/githubconn/" title="Git push/pull时的网络问题"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Git push/pull时的网络问题</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/05/01/highlightjs/" title="在vue中使用highlight.js实现代码显示"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">ctf大佬博客</span>
+          <span class="category-post">在vue中使用highlight.js实现代码显示</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/03/21/veupress/" title="部署vuepress + github-pages"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">部署vuepress + github-pages</span>
         </a>
       
     
@@ -324,12 +342,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ctf大佬博客</h1>
+            <h1 style="display: none">在vue中使用highlight.js实现代码显示</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：3 天前
+                    本文最后更新于：几秒前
                   
                 
               </p>
@@ -338,83 +356,15 @@
               <div class="markdown-body">
                 
                 <div class="note note-success">
-            <p>一些关于ctf、渗透的大佬博客</p>
+            <p>vue使用highLight.js实现代码高亮，但是仅仅限于对代码进行高亮操作，图片以及二进制（jar、os、smali等）暂不支持</p>
           </div>
 <span id="more"></span>
-<ul>
-<li>这不是个博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_2880719/">https://blog.csdn.net/qq_2880719/</a></li>
-<li>小松博客 <a target="_blank" rel="noopener" href="https://www.woshidie.com/">https://www.woshidie.com/</a></li>
-<li>贝塔博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/Amherstieae">https://blog.csdn.net/Amherstieae</a></li>
-<li>R1博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_17696915/">https://blog.csdn.net/qq_17696915/</a></li>
-<li>ad博客 <a target="_blank" rel="noopener" href="https://dogge.top/">https://dogge.top/</a></li>
-<li>大周博客 <a target="_blank" rel="noopener" href="https://www.d1a0.cn/">https://www.d1a0.cn/</a></li>
-<li>三哈博客 <a target="_blank" rel="noopener" href="http://www.su-sanha.cn">http://www.su-sanha.cn</a></li>
-<li>serfend博客 <a target="_blank" rel="noopener" href="https://serfend.top">https://serfend.top</a></li>
-<li>羽博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/miuzzx/">https://blog.csdn.net/miuzzx/</a></li>
-<li>la博客 <a target="_blank" rel="noopener" href="https://lazzzaro.github.io/">https://lazzzaro.github.io/</a></li>
-<li>ha博客 <a target="_blank" rel="noopener" href="https://ha1c9on.top">https://ha1c9on.top</a></li>
-<li>fr博客 <a target="_blank" rel="noopener" href="https://blog.frankli.site/">https://blog.frankli.site/</a></li>
-<li>美女博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_46091464/">https://blog.csdn.net/qq_46091464/</a></li>
-<li>he博客 <a target="_blank" rel="noopener" href="https://hellohy.top">https://hellohy.top</a></li>
-<li>l0博客 <a target="_blank" rel="noopener" href="https://l0ne1">https://l0ne1</a></li>
-<li>y4博客 <a target="_blank" rel="noopener" href="https://y4tacker.blog.csdn.net/">https://y4tacker.blog.csdn.net/</a></li>
-<li>y4新博客 <a target="_blank" rel="noopener" href="http://blog.y4tacker.top/">http://blog.y4tacker.top/</a></li>
-<li>atao博客 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/erR0Ratao/">https://www.cnblogs.com/erR0Ratao/</a></li>
-<li>sc博客 <a target="_blank" rel="noopener" href="https://bbs.pediy.com/user-home-876323.htm">https://bbs.pediy.com/user-home-876323.htm</a></li>
-<li>雪晴博客 <a target="_blank" rel="noopener" href="https://yq1ng.github.io/">https://yq1ng.github.io/</a></li>
-<li>太空人博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/WFC1006848997">https://blog.csdn.net/WFC1006848997</a></li>
-<li>spaceman博客 <a target="_blank" rel="noopener" href="https://spaceman-911.gitee.io/">https://spaceman-911.gitee.io/</a></li>
-<li>typotypo博客 <a target="_blank" rel="noopener" href="https://typ0typ0.github.io/">https://typ0typ0.github.io/</a></li>
-<li>bit博客 <a target="_blank" rel="noopener" href="https://www.xl-bit.cn">https://www.xl-bit.cn</a></li>
-<li>错错博客 <a target="_blank" rel="noopener" href="https://typ0typ0.github.io/">https://typ0typ0.github.io/</a></li>
-<li>So4ms博客 <a target="_blank" rel="noopener" href="https://so4ms.top/">https://so4ms.top/</a></li>
-<li>yemoli博客 <a target="_blank" rel="noopener" href="https://yml-sec.top/">https://yml-sec.top/</a></li>
-<li>南方博客 <a target="_blank" rel="noopener" href="https://www.wlhhlc.top">https://www.wlhhlc.top</a></li>
-<li>feng博客 <a target="_blank" rel="noopener" href="https://ego00.blog.csdn.net/">https://ego00.blog.csdn.net/</a></li>
-<li>Tajang博客 <a target="_blank" rel="noopener" href="https://ctfking.com">https://ctfking.com</a></li>
-<li>Mason博客 <a target="_blank" rel="noopener" href="https://m4son.cn">https://m4son.cn</a></li>
-<li>Y0博客 <a href="yongsheng.site">yongsheng.site</a></li>
-<li>春哥知乎 <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/ZM_________J/posts">https://www.zhihu.com/people/ZM_________J/posts</a></li>
-<li>yang99博客 <a target="_blank" rel="noopener" href="http://yang99.top">http://yang99.top</a></li>
-<li>striving <a target="_blank" rel="noopener" href="http://www.zbc53.top/">http://www.zbc53.top/</a></li>
-<li>天天被套神骂的废物博客 <a target="_blank" rel="noopener" href="https://github.com/davidcheyenneone/CTF">https://github.com/davidcheyenneone/CTF</a></li>
-<li>一只狗 <a target="_blank" rel="noopener" href="https://www.anquanke.com/member/155655">https://www.anquanke.com/member/155655</a></li>
-<li>菜牛 <a href="ww.njhlove.club">ww.njhlove.club</a></li>
-<li>孤桜懶契 <a target="_blank" rel="noopener" href="https://gylq.gitee.io">https://gylq.gitee.io</a></li>
-<li>1stPeak博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_4161703">https://blog.csdn.net/qq_4161703</a></li>
-<li>n03tAck团队博客 <a href="wp.n03tack.top">wp.n03tack.top</a></li>
-<li>Ocean <a href="blog.csdn.net/ocean">blog.csdn.net/ocean</a></li>
-<li>想学pwn的小web MuRKuo的博客 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/murkuo/">https://www.cnblogs.com/murkuo/</a></li>
-<li>花花的柚子 <a target="_blank" rel="noopener" href="https://blog.hanayuzu.top/">https://blog.hanayuzu.top/</a></li>
-<li>yun0tian <a target="_blank" rel="noopener" href="https://www.yun0tian.top/">https://www.yun0tian.top/</a></li>
-<li>alexzms <a target="_blank" rel="noopener" href="https://blog.alexzms.com/">https://blog.alexzms.com/</a></li>
-<li>小白’Blog <a target="_blank" rel="noopener" href="https://idiot-white.top/">https://idiot-white.top/</a></li>
-<li>pysnow <a target="_blank" rel="noopener" href="https://pysnow.cn">https://pysnow.cn</a></li>
-<li>Paidx0 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_49656607">https://blog.csdn.net/weixin_49656607</a></li>
-<li>M1sery的厨房 不太擅长做菜（悲 <a target="_blank" rel="noopener" href="https://www.yuque.com/misery333">https://www.yuque.com/misery333</a></li>
-<li>snakin <a target="_blank" rel="noopener" href="https://blog.csdn.net/cosmoslin">https://blog.csdn.net/cosmoslin</a></li>
-<li>mxx307 <a target="_blank" rel="noopener" href="http://www.mxx307.com/">http://www.mxx307.com/</a></li>
-<li>ISHEEPI <a target="_blank" rel="noopener" href="http://www.cryocry.cn">http://www.cryocry.cn</a></li>
-<li>Bnessy <a target="_blank" rel="noopener" href="https://bnessy.com/">https://bnessy.com/</a></li>
-<li>yink’s studio <a target="_blank" rel="noopener" href="https://yinkstudio.xyz">https://yinkstudio.xyz</a></li>
-<li>z1r0 <a target="_blank" rel="noopener" href="https://www.z1r0.top/">https://www.z1r0.top/</a></li>
-<li>fge7s <a target="_blank" rel="noopener" href="https://fge7s.cn">https://fge7s.cn</a></li>
-<li>ylcao <a target="_blank" rel="noopener" href="https://ylcao.top">https://ylcao.top</a></li>
-<li>impdx的博客 <a target="_blank" rel="noopener" href="https://www.impdx.vip">https://www.impdx.vip</a></li>
-<li>c0de的博客 <a target="_blank" rel="noopener" href="https://www.yuque.com/c0de">https://www.yuque.com/c0de</a></li>
-<li>唐仔橙 <a target="_blank" rel="noopener" href="http://tangzichengcc.github.io">http://tangzichengcc.github.io</a></li>
-<li>Squirt1e <a target="_blank" rel="noopener" href="http://www.squirt1e.top/">http://www.squirt1e.top/</a></li>
-<li>Paintrain <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_62506844">https://blog.csdn.net/m0_62506844</a></li>
-<li>v2ish1yan <a target="_blank" rel="noopener" href="http://v2ish1yan.top">http://v2ish1yan.top</a></li>
-<li>苏落的博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61993117">https://blog.csdn.net/qq_61993117</a></li>
-<li>q1jun的博客 <a target="_blank" rel="noopener" href="http://q1jun.cn">http://q1jun.cn</a></li>
-<li>S7iter的博客 <a target="_blank" rel="noopener" href="http://www.oosec.cn">http://www.oosec.cn</a></li>
-<li>M1n9K1n9 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_54704239">https://blog.csdn.net/qq_54704239</a></li>
-<li>pankas的blog <a target="_blank" rel="noopener" href="https://pankas.top/">https://pankas.top/</a></li>
-<li>黎明破晓曙光晨曦 <a target="_blank" rel="noopener" href="https://f1eeg0urj5.feishu.cn/docx/VnlOd8o1KoytpJxkuyvcqBHAnEh">https://f1eeg0urj5.feishu.cn/docx/VnlOd8o1KoytpJxkuyvcqBHAnEh</a></li>
-<li>Nsus-Pwn <a target="_blank" rel="noopener" href="https://OSLike.github.io">https://OSLike.github.io</a></li>
-</ul>
-
+<h2 id="template-demo">template demo</h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-html</span>=<span class="hljs-string">&quot;code_data&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+<h2 id="安装highlight-js">安装highlight.js</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install --save vue-highlightjs<br>npm install --save highlight.js<br></code></pre></td></tr></table></figure>
+<h2 id="typescript">typescript</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> hljs <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/core&#x27;</span><br><span class="hljs-keyword">import</span> java <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/java&#x27;</span><br><span class="hljs-keyword">import</span> plaintext <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/plaintext&#x27;</span><br><span class="hljs-keyword">import</span> xml <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/xml&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;highlight.js/styles/github.css&#x27;</span><br><br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;java&#x27;</span>, java)<br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;plaintext&#x27;</span>, plaintext)<br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;xml&#x27;</span>, xml)<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>    <span class="hljs-title function_">setup</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">const</span> code_data = <span class="hljs-title function_">ref</span>();<br>    <span class="hljs-comment">// 要显示的代码内容</span><br>    <span class="hljs-keyword">const</span> content = <br>        <span class="hljs-string">`Tip:\n1、1\n2、2`</span>;<br>    code_data.<span class="hljs-property">value</span> = <span class="hljs-title function_">lineNumbers</span>(content, <span class="hljs-string">&#x27;plaintext&#x27;</span>)<br>    &#125;,<br>    <span class="hljs-title function_">mounted</span>(<span class="hljs-params"></span>) &#123;<br>    hljs.<span class="hljs-title function_">highlightAll</span>();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -432,7 +382,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/" class="category-chain-item">友情链接</a>
+  <a href="/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="category-chain-item">解决方案</a>
   
   
 
@@ -447,9 +397,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/ctf/">#ctf</a>
+        <a href="/tags/vue/">#vue</a>
       
-        <a href="/tags/ctfshow/">#ctfshow</a>
+        <a href="/tags/highlight/">#highlight</a>
       
     </div>
   
@@ -461,8 +411,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ctf大佬博客</div>
-      <div>http://sec-cat.github.io/2022/05/20/ctfshowblog/</div>
+      <div>在vue中使用highlight.js实现代码显示</div>
+      <div>http://sec-cat.github.io/2023/05/01/highlightjs/</div>
     </div>
     <div class="license-meta">
       
@@ -474,7 +424,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月20日</div>
+          <div>2023年5月1日</div>
         </div>
       
       
@@ -506,15 +456,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/11/adversarial/" title="Adversarial">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Adversarial</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/04/27/githubconn/" title="Git push/pull时的网络问题">
+                        <span class="hidden-mobile">Git push/pull时的网络问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

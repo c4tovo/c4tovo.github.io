@@ -16,25 +16,24 @@
   <meta name="author" content="cat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="vue使用highLight.js实现代码高亮，但是仅仅限于对代码进行高亮操作，图片以及二进制（jar、os、smali等）暂不支持">
+    <meta name="description" content="在使用kali时需要用到pip安装其他包，但是kali自带的python3下的pip是要基于apt下载的，这就导致了有些包不能正常安装，所以这里使用到了conda，并且记录一下安装conda的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在vue中使用highlight.js实现代码显示">
-<meta property="og:url" content="http://sec-cat.github.io/2023/05/01/highlightjs/index.html">
+<meta property="og:title" content="kali2022-conda">
+<meta property="og:url" content="http://sec-cat.github.io/2023/05/31/kali2022/index.html">
 <meta property="og:site_name" content="Sec-cat&#39;s Blog">
-<meta property="og:description" content="vue使用highLight.js实现代码高亮，但是仅仅限于对代码进行高亮操作，图片以及二进制（jar、os、smali等）暂不支持">
+<meta property="og:description" content="在使用kali时需要用到pip安装其他包，但是kali自带的python3下的pip是要基于apt下载的，这就导致了有些包不能正常安装，所以这里使用到了conda，并且记录一下安装conda的问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://sec-cat.github.io/img/highlightjs/code.png">
-<meta property="article:published_time" content="2023-05-01T06:27:50.000Z">
-<meta property="article:modified_time" content="2023-05-06T02:05:59.118Z">
+<meta property="og:image" content="http://sec-cat.github.io/img/kali/kali.jpg">
+<meta property="article:published_time" content="2023-05-31T13:39:05.000Z">
+<meta property="article:modified_time" content="2023-05-31T14:01:20.602Z">
 <meta property="article:author" content="cat">
-<meta property="article:tag" content="vue">
-<meta property="article:tag" content="highlight">
+<meta property="article:tag" content="kali">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://sec-cat.github.io/img/highlightjs/code.png">
+<meta name="twitter:image" content="http://sec-cat.github.io/img/kali/kali.jpg">
   
   
   
-  <title>在vue中使用highlight.js实现代码显示 - Sec-cat&#39;s Blog</title>
+  <title>kali2022-conda - Sec-cat&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -217,7 +216,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="在vue中使用highlight.js实现代码显示"></span>
+            <span id="subtitle" data-typed-text="kali2022-conda"></span>
           
         </div>
 
@@ -228,8 +227,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-01 14:27" pubdate>
-          2023年5月1日 下午
+        <time datetime="2023-05-31 21:39" pubdate>
+          2023年5月31日 晚上
         </time>
       </span>
     
@@ -240,7 +239,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          907 字
+          172 字
         
       </span>
     
@@ -251,7 +250,7 @@
         
         
         
-          4 分钟
+          1 分钟
         
       </span>
     
@@ -326,7 +325,7 @@
       
         <a href="/2023/05/31/kali2022/" title="kali2022-conda"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">kali2022-conda</span>
         </a>
       
@@ -344,7 +343,7 @@
       
         <a href="/2023/05/01/highlightjs/" title="在vue中使用highlight.js实现代码显示"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">在vue中使用highlight.js实现代码显示</span>
         </a>
       
@@ -377,12 +376,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">在vue中使用highlight.js实现代码显示</h1>
+            <h1 style="display: none">kali2022-conda</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：25 天前
+                    本文最后更新于：3 分钟前
                   
                 
               </p>
@@ -391,15 +390,13 @@
               <div class="markdown-body">
                 
                 <div class="note note-success">
-            <p>vue使用highLight.js实现代码高亮，但是仅仅限于对代码进行高亮操作，图片以及二进制（jar、os、smali等）暂不支持</p>
+            <p>在使用kali时需要用到pip安装其他包，但是kali自带的python3下的pip是要基于apt下载的，这就导致了有些包不能正常安装，所以这里使用到了conda，并且记录一下安装conda的问题</p>
           </div>
 <span id="more"></span>
-<h2 id="template-demo">template demo</h2>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-html</span>=<span class="hljs-string">&quot;code_data&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
-<h2 id="安装highlight-js">安装highlight.js</h2>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install --save vue-highlightjs<br>npm install --save highlight.js<br></code></pre></td></tr></table></figure>
-<h2 id="typescript">typescript</h2>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> hljs <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/core&#x27;</span><br><span class="hljs-keyword">import</span> java <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/java&#x27;</span><br><span class="hljs-keyword">import</span> plaintext <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/plaintext&#x27;</span><br><span class="hljs-keyword">import</span> xml <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;highlight.js/lib/languages/xml&#x27;</span><br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;highlight.js/styles/github.css&#x27;</span><br><br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;java&#x27;</span>, java)<br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;plaintext&#x27;</span>, plaintext)<br>hljs.<span class="hljs-title function_">registerLanguage</span>(<span class="hljs-string">&#x27;xml&#x27;</span>, xml)<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>    <span class="hljs-title function_">setup</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">const</span> code_data = <span class="hljs-title function_">ref</span>();<br>    <span class="hljs-comment">// 要显示的代码内容</span><br>    <span class="hljs-keyword">const</span> content = <br>        <span class="hljs-string">`Tip:\n1、1\n2、2`</span>;<br>    code_data.<span class="hljs-property">value</span> = <span class="hljs-title function_">lineNumbers</span>(content, <span class="hljs-string">&#x27;plaintext&#x27;</span>)<br>    &#125;,<br>    <span class="hljs-title function_">mounted</span>(<span class="hljs-params"></span>) &#123;<br>    hljs.<span class="hljs-title function_">highlightAll</span>();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="source-bashrc-报错失败"><code>source ~/.bashrc</code> 报错失败</h2>
+<p><code>解决方案</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">copy `~/.bashrc`中的conda配置到 `~/.zshrc`<br><span class="hljs-built_in">source</span> ~/.zshrc<br></code></pre></td></tr></table></figure>
+
                 
               </div>
             
@@ -432,9 +429,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/vue/">#vue</a>
-      
-        <a href="/tags/highlight/">#highlight</a>
+        <a href="/tags/kali/">#kali</a>
       
     </div>
   
@@ -446,8 +441,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>在vue中使用highlight.js实现代码显示</div>
-      <div>http://sec-cat.github.io/2023/05/01/highlightjs/</div>
+      <div>kali2022-conda</div>
+      <div>http://sec-cat.github.io/2023/05/31/kali2022/</div>
     </div>
     <div class="license-meta">
       
@@ -459,7 +454,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月1日</div>
+          <div>2023年5月31日</div>
         </div>
       
       
@@ -491,18 +486,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/06/phpinterator/" title="关于php中原生类的应用">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于php中原生类的应用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/27/githubconn/" title="Git push/pull时的网络问题">
-                        <span class="hidden-mobile">Git push/pull时的网络问题</span>
+                      <a href="/2023/05/14/LitCTF2023/" title="Writeup[LitCTF2023]">
+                        <span class="hidden-mobile">Writeup[LitCTF2023]</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

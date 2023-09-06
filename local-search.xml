@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Vulfocus安装及同步</title>
+    <link href="/2023/09/06/vulfocus/"/>
+    <url>/2023/09/06/vulfocus/</url>
+    
+    <content type="html"><![CDATA[<div class="note note-success">            <p>记录一下搭建vulfocus时遇到的问题以及解决方案</p>          </div><span id="more"></span><h2 id="搭建步骤">搭建步骤</h2><blockquote><p>下面直接给出完整安装步骤，具体问题在下面进行分析</p></blockquote><p><code>step1</code></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-comment">// 修改/etc/docker/daemon.json</span><br><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;registry-mirrors&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>  <span class="hljs-string">&quot;https://dockerproxy.com/&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p><code>step2</code></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 重载docker仓库</span><br>systemctl daemon-reload<br><span class="hljs-comment"># 重启docker</span><br>systemctl restart docker<br><span class="hljs-comment"># 拉取vulfocus</span><br>docker pull dockerproxy.com/vulfocus/vulfocus:latest<br><span class="hljs-comment"># 重命名镜像</span><br>docker tag dockerproxy.com/vulfocus/vulfocus:latest vulfocus/vulfocus:latest<br><span class="hljs-comment"># 删除代理镜像</span><br>docker rmi dockerproxy.com/vulfocus/vulfocus:latest<br><span class="hljs-comment"># 创建vulfocus容器</span><br>docker create -p 80:80 -v /var/run/docker.sock:/var/run/docker.sock -e VUL_IP=xxx.xxx.xxx.xxx vulfocus/vulfocus<br><span class="hljs-comment"># 开启容器</span><br>docker ps -a <br>docker start &#123;container-id&#125;<br></code></pre></td></tr></table></figure><p><code>step3</code></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 加上阿里云加速镜像</span><br><span class="hljs-comment"># https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</span><br>sudo <span class="hljs-built_in">mkdir</span> -p /etc/docker<br>sudo <span class="hljs-built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">&#x27;EOF&#x27;</span><br>&#123;<br>  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [<span class="hljs-string">&quot;https://xxxxx.mirror.aliyuncs.com&quot;</span>]<br>&#125;<br>EOF<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure><h2 id="Q1-docker部署容器浏览器访问不了">Q1:docker部署容器浏览器访问不了</h2><blockquote><p>这个是我在虚拟机中偶然遇到的问题，在正常运行容器后发现端口映射成功，但是浏览器上就是访问不了，然后ifconfig发现docker:0没有ip,j解决方案就是直接重启，在ecs上暂未发现此类问题</p></blockquote><blockquote><p>针对这个问题展开的一个问题是在正常运行容器后发现端口映射失败，这样的情况大概率跟docker版本和linux版本有关系</p></blockquote><h2 id="Q2-镜像同步失败">Q2:镜像同步失败</h2><blockquote><p>最开始直接参考官方文档<code>https://fofapro.github.io/vulfocus/</code>，很快捷，但是镜像同步失败</p></blockquote><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh">docker pull vulfocus/vulfocus:latest<br><br>docker create -p 80:80 -v /var/run/docker.sock:/var/run/docker.sock  -e VUL_IP=xxx.xxx.xxx.xxx -e EMAIL_HOST=<span class="hljs-string">&quot;xxx.xxx.xxx&quot;</span> -e EMAIL_HOST_USER=<span class="hljs-string">&quot;xxx@xxx.com&quot;</span> -e EMAIL_HOST_PASSWORD=<span class="hljs-string">&quot;xxxxxxxx&quot;</span> vulfocus/vulfocus<br><br>docker start container <span class="hljs-built_in">id</span><br></code></pre></td></tr></table></figure><blockquote><p>参考了很多资料，例如<code>https://github.com/fofapro/vulfocus/issues/297</code>等，最佳的解决方案就是换镜像源<code>&quot;https://dockerproxy.com/&quot;</code>，在拉取vulfocus完成后，再将镜像源修改为国内镜像源即可</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>解决方案</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vulfocus</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>kali2022-conda</title>
     <link href="/2023/05/31/kali2022/"/>
     <url>/2023/05/31/kali2022/</url>
